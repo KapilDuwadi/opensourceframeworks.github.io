@@ -41,10 +41,62 @@
                 
                 <div class='framework-content'>
                     <h4> Read: Approx. 10 minutes</h4>
-                    <p> EMeRGE is an opensource software framework developed using <a href="https://www.python.org">Python</a> at National Renewable Energy Laboratrory (NREL) in 2020.
-                    This tools allows user to develop distribution feeder model using GIS data, developed customized solar deployment scenarios, compute and compare risk metrics at both system
-                    and asset level and visulize them in an easy to user dashboard. <a href='emerge.html'> Read more >></a></p>
+                    <p> EMeRGE is an opensource software framework developed using <a href="https://www.python.org">Python</a> at National Renewable Energy Laboratory (NREL) in 2020.
+                    This tool allows user to develop distribution feeder model using GIS data, develop customized solar deployment scenarios, compute and compare risk metrics at both system
+                    and asset level and visualize them in an easy to use interactive dashboard</p>
+
+                    <br>
+                    <mark class="highlight">Feeder model development</mark>
+
+                    <p> Distribution feeder typically have radial structure with no loops and can contain one or more distribution
+                        transformers. Modeling feeder requires information of distribution assests such as conductors, transformers, customers etc.
+                        Distribution utilities also known as distribution companies typically store asset information in a geographic information system (GIS).
+                        EMeRGE can automate the process of extraction of assest information stored in .shp files (file format typically used to store geographic data) and create 
+                        close to accurate distribution feeder model in an OpenDSS format. <a href="https://www.epri.com/pages/sa/opendss">OpenDSS</a> is an open source distribution system simulator software developed by <a hred="https://www.epri.com">EPRI.</a>
+                        The process of converting .shp files into .dss files (OpenDSS uses .dss file format to store distribution model) is as follows:
+
+                        <ul>
+                            <li> Assest information along with coordinates are extracted in .csv file format. For this EMeRGE leverages <a href="https://qgis.org/en/site">QGIS.</a>
+                            </li>
+                            <li> Once the csv files are generated, next process is to clean them. Cleaning involves removing unnecessary data and filling
+                                missing data with appropriate values.
+                            </li>
+                            <li> EMeRGE has in built reader and writer to convert distribution asset information stored csv file to OpenDSS feeder model.</li>
+                        </ul>
+                    </p>
+
+                    <br>
+
+                    <mark class="highlight">Custom PV scenarios</mark>
+                    <p>
+                        To model the future solar or PV deployment scenarios four parameters namely number of customers with roof top PV, size of individual PV,
+                        location of customers relative to substation, and voltvar setting for inverters can be configured in EMeRGE. Roof top PV is sized based on annual energy consumption before installing solar.
+                        For e.g. if a customer has pre-solar annual energy consumption of 1000 kWh, and percentage energy consumption customer is willing to replace using PV is 50% then size of PV
+                        required is equal to 1000x0.5/(365x24x capacity factor) kW. Now capacity factor of PV depends on many factors such as location, panel orientation etc. 
+                        EMeRGE utilizes irradiance data of feeder location to compute the capacity factor and assumes maximum solar generation to reflect worst case scenario.
+                        By default customers are randomly selected across the feeder for PV deployment but they also have flexibility to select customers near or far from the substation to define a scenario.
+                        Scenario with customized voltvar settings for solar inverters can also be defined and simulated using EMeRGE. 
+                    </p>
+
+                    <br>
+
+                    <mark class="highlight">Risk metrics for both system and assets</mark>
+
+                    <p> Generally, impact study for distrubution feeders due to emerging technologies involves assessing magnitude of violations (a violation in power system lingo means technical parameter such as 
+                        voltage, thermal loading etc exceeding recommended thresholds values) across a sample of time stamps in whole year. The problem with this approach is that such violations may have occured for a 
+                        very small period of time during whole year and risk associated with them might be lower or within the risk margin of utilities. EMeRGE uses risk metrics that look at severity and duration of violation along with 
+                        number of customers present downward of the network in entire simulation time period to compute them.
+                    </p>
+
+                    <mark class="highlight">Interactive dashboard</mark>
+
+                    <p> After metrics are computed by peforming time series powerflow results can be visualized in an interactive dashboard using EMeRGE. It also
+                        uses geographic coordinates to plot the network and shows metrics on top of them. Using dashboard, user can also perform individual PV interconnecton assessment.
+                        EMeRGE uses ploty to develop dashboard that can be launced in your favourite web browser.
+                    </p>
+
                 </div>
+                
 
 
 
