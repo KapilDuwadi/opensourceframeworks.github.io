@@ -1,0 +1,261 @@
+body {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin:0;
+    background: #205E79;
+}
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#home-header{
+    /* background-image: url("../images/home_page_top.svg");  */
+    width: 100%;
+    /* background-repeat: no-repeat;
+    background-size: cover;  */
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#logo {
+    float: left;
+    padding-top: 20px;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+#logoimage{
+    height: 60px;
+}
+
+#menu{
+    float: right;
+    width: 35%;
+    padding-top: 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+#menu li {
+    display: inline;
+    padding-right: 20px;
+}
+
+#menu a:hover{
+    text-decoration: underline;
+}
+
+.clr{
+    clear: both;
+}
+
+.framework-container {
+    border-left: 5px solid coral;
+    padding-left: 1%;
+}
+
+.framework-container h1 {
+    margin-top: 5%;
+    font-size: 1.6em;
+    color: coral;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.framework-container h2 {
+    padding-top: 0;
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: normal;
+    font-style: italic;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.contact{
+    border-radius: 50%;
+    float: left;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+#contact-info{
+    text-align: center;
+    color: white;
+    margin: 5% 20%;
+    margin-bottom: 3%;
+}
+
+.contact-card {
+    margin-top: 8%;
+    float: right;
+    width: 60%;
+}
+.contact-card h1{
+    color: coral;
+}
+
+.contact-card p{
+    color: white;
+    font-style: italic;
+}
+
+.contact-card a{
+    color: cyan;
+    text-decoration: underline;
+}
+
+.framework-container a{
+    color: cyan;
+}
+
+.framework-content h4{
+    color: white;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.framework-content p{
+    color: white;
+    font-weight: normal;
+    line-height: 1.8em;
+    font-size: 1.1em;
+}
+
+.framework-content a{
+    color: cyan;
+    text-decoration: underline;
+}
+
+.framework-container h3 {
+    padding-top: 0;
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: normal;
+    font-style: italic;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#big-text{
+    padding-top: 0%;
+    width: 100%;
+    border-spacing: border-box;
+}
+
+#big-text h1{
+    font-size: 50px;
+    line-height: 1.2em;
+    text-align: left;
+    color: coral;
+    margin-bottom: 0;
+    text-align: center;
+}
+#big-text p{
+    color: white;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    text-align: center;
+    margin: 0 10%;
+    margin-bottom: 4%;
+}
+
+.network {
+    max-width: 70%;
+    padding-left: 15%;
+}
+
+/* .right-box{
+    float: right;
+    margin-top: 5%;
+    width: 45%;
+    height: 70vh;
+    background-image: url("./images/network.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+} */
+
+#home-footer p{
+    text-align: center;
+    color: white;
+}
+
+.styled_par {
+    font-style: italic;
+    color: white;
+}
+
+@media(max-width: 800px){
+
+    #home-header{
+        background: #205E79; 
+        height: auto;
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    #big-text{
+        float: none;
+        width: 100%;
+    }
+
+    .right-box{
+        float: none;
+        width: 100%;
+        background-position: center center;
+    }
+
+}
+
+@media(max-width: 1050px){
+
+    #logo{
+        width: 40%;
+    }
+
+    #menu{
+        width: 60%;
+    }
+
+    #big-text h1{
+        font-size: 40px;
+    }
+    #big-text p{
+        font-size: 16px;
+    }
+
+}
+
+@media(max-width: 630px){
+    #logo{
+        float: none;
+        width: 100%;
+    }
+
+    #logoimage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #menu {
+        float: none;
+        width: 100%;
+    }
+
+}
