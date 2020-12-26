@@ -270,23 +270,24 @@ a{
     }
 
     .framework-content p{
-        line-height: 2.5em;
-        font-size: 1.3em;
+        line-height: 1.8em;
+        font-size: 1em;
     }
 
-    .framework-content h4{
-        line-height: 2.5em;
-        font-size: 1.3em;
+    .framework-container h2 {
+        font-size: 1em;
+        line-height: 1.3em;
+        color: white;
     }
 
-    .framework-container h2, h3 {
-        font-size: 1.3em;
-        line-height: 1.6em;
+    .framework-container h3 {
+        font-size: 1em;
+        line-height: 1.3em;
         color: white;
     }
 
     #home-footer p{
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .network {
@@ -337,6 +338,28 @@ a{
 
     #big-text h1{
         margin-top: 0%;
+    }
+
+}
+
+@media(max-width: 400px){
+
+    .framework-container h2 {
+       text-align: center;
+    }
+
+    .framework-container h3 {
+        text-align: center;
+    }
+
+    .framework-container h1 {
+        text-align: center;
+    }
+
+    .framework-container {
+        border-left: none;
+        border-bottom: 2px solid coral;
+        padding-left: 0;
     }
 
 }
