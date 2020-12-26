@@ -253,9 +253,90 @@ a{
         margin-right: auto;
     }
 
+    /* #menu {
+        float: none;
+        width: 100%;
+        font-size: 1.3em;
+        padding: 5% 0;
+
+    } */
+
+    #big-text h1{
+        font-size: 2.2em;
+        padding-bottom: 2%;
+    }
+    #big-text p{
+        font-size: 1.2em;
+    }
+
+    .framework-content p{
+        line-height: 2.5em;
+        font-size: 1.3em;
+    }
+
+    .framework-content h4{
+        line-height: 2.5em;
+        font-size: 1.3em;
+    }
+
+    .framework-container h2, h3 {
+        font-size: 1.3em;
+        line-height: 1.6em;
+        color: white;
+    }
+
+    #home-footer p{
+        font-size: 1.1em;
+    }
+
+    .network {
+        padding-top: 10%;
+        max-width: 90%;
+        padding-left: 0%;
+    }
+
+    .styled_par {
+        padding-top: 2%;
+        text-align: center;
+        line-height: 1.5em;
+
+    }
+
+    .contact{
+        float: none;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .contact-card{
+        float: none;
+        width: 100%
+    }
+
+    .contact-card h1{
+        text-align: center;
+    }
+
+    #contact-info {
+        margin: 10% 5%;
+    }
+
     #menu {
         float: none;
         width: 100%;
+        font-size: 1.3em;
+        padding: 5% 0;
+    }
+    
+    #menu li {
+        display: block;
+        padding: 5% 0;
+        text-align: center;
+        padding-right: 10%;
+    }
+
+    #big-text h1{
+        margin-top: 0%;
     }
 
 }
