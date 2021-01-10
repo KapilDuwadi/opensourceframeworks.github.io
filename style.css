@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
 body {
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    /* Arial, Helvetica, sans-serif; */
     font-size: 16px;
     line-height: 1.6em;
     margin:0;
@@ -39,7 +42,7 @@ a{
 
 #menu{
     float: right;
-    width: 35%;
+    width: 40%;
     padding-top: 20px;
     box-sizing: border-box;
     font-size: 18px;
@@ -227,7 +230,73 @@ mark {
 }
 
 .framework .left_emerge_image > img{
-    height: 320px;
+    height: 250px;
+}
+
+.grid_container{
+    /* display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 3em; */
+    display: flex;
+
+}
+
+.container_with_icon{
+    color: white;
+    background-color: none;
+    text-align: center;
+    padding: 25px;
+    font-family: 'Varela Round';
+    margin: 5px;
+}
+
+.container_with_icon h2{
+    font-weight: normal;
+    color: yellow;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.very_small_container{
+    display: inline-flex;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    color: white;
+}
+
+.very_small_container h4{
+    margin: 1em;
+}
+
+.emerge-risk-box div{
+    display: block;
+    margin: 5px 0;
+    padding: 0 10px;
+    background-color: coral;
+}
+
+.emerge-risk-box .box1{
+    width: 80%;
+}
+
+.emerge-risk-box .box2{
+    width: 70%;
+}
+.emerge-risk-box .box3{
+    width: 95%;
+}
+
+.end-message {
+    display: flex;
+    color: yellow;
+    align-items: center;
+    justify-content: center;
+}
+
+.end-message p{
+    margin-left: 10px;
 }
 
 @media(max-width: 800px){
@@ -391,6 +460,13 @@ mark {
     }
     .risk_im > img {
         height: 0px;
+    }
+    .grid_container{
+        /* display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 3em; */
+        display: block;
+    
     }
 
 }

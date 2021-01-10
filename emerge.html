@@ -14,6 +14,7 @@
         <title>Emerge</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
 
     <body>
@@ -48,27 +49,49 @@
 
                     <iframe width=100% height=400px src="https://www.youtube.com/embed/29AiUPDd3n0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     
-                    <div class="framework">
-                        <div class="right_des">
-                            <mark> Features of EMeRGE</mark>
-                            <p>Using EMeRGE, utilities can utilize their data to model and analyze the feeder. EMeRGE utilizes not only
-                                technical information about assests present in the feeder but also low resolution consumer's energy consumption data as well as high resolution 
-                            SCADA data to build time series load profile for different consumer's group. It also provides ability to model
-                            classical PV (pv with unity power factor) as well as advanced PV (pv with advanced inverter functions). New metrics
-                            are included to measure risk associated with assets and network. Interactive dashboard is also included to visualize metrics. </p>
+                    
+                    <div class='grid_container'>
+                        <div class='container_with_icon'>
+                            <i class="fas fa-cogs fa-5x"></i> 
+                            <h2>Using utility data for feeder model development</h2>
+                            <p>Assest information stored in Geographic Information System (GIS) can be used to develop
+                                distribution feeder model using EMeRGE. These models are necessary to perform different kinds of study
+                                such as techno-economic analysis, DER impact assessment, upgrade analysis and so on.
+                            </p>
                         </div>
-                        <div class="left_emerge_image">
-                            <img src="images/emerge.png">
+                        <div class='container_with_icon'>
+                            <i class="fas fa-solar-panel fa-5x"></i> 
+                            <h2>Analyze impact of distributed PV systems</h2>
+                            <p> Reduction in cost is triggering rapid rise of roof top solar installations 
+                                in customer homes. Increased installation of distributed solar is no doubt beneficial but also comes 
+                                with challenges. EMeRGE helps in conducting PV impact studies in distribution feeders.
+                            </p>
                         </div>
                     </div>
-
-                    <div class="clr"></div>
+                    <div class='grid_container'>
+                        <div class='container_with_icon'>
+                            <i class="fas fa-analytics fa-5x"></i> 
+                            <h2>15+ risk metrics for making decision</h2>
+                            <p> Most of the analysis in distribution feeder requires performing time series power flow analysis.
+                                The results of such analysis produce lots of data, however very few tools provide metrics to understand what is happening.
+                                EMeRGE has in built metrics that quantifies risk both at system and asset level.
+                            </p>
+                        </div>
+                        <div class='container_with_icon'>
+                            <i class="fas fa-laptop fa-5x"></i> 
+                            <h2>Interactive dashboard to visualize metrics</h2>
+                            <p> EMeRGE not only computes metrics after performing time series power flow analysis on distribution feeders but also offers 
+                                an interactive dashboard developed using <a href="https://www.plotly.com">Plotly</a> making it easy to visulaize them. It also offers a platform to perform PV
+                                interconnection assessment.
+                            </p>
+                        </div>
+                    </div>
                     
                     <br>
                     <mark>Feeder model development</mark>
 
                     <p> Distribution feeder typically have radial structure with no loops and can contain one or more distribution
-                        transformers. Modeling feeder requires information of distribution assets such as conductors, transformers, customers etc.
+                        transformers. Modeling feeder requires information about distribution assets such as conductors, transformers, customers etc.
                         Distribution utilities also known as distribution companies typically store asset information in a geographic information system (GIS).
                         EMeRGE can automate the process of extraction of asset information stored in .shp files (file format typically used to store geographic data) and create 
                         close to accurate distribution feeder model in an OpenDSS format. <a href="https://www.epri.com/pages/sa/opendss">OpenDSS</a> is an open source distribution system simulator software developed by <a hred="https://www.epri.com">EPRI.</a>
@@ -89,11 +112,34 @@
                     <mark class="highlight">Custom PV scenarios</mark>
                     <p>
                         To model the future solar or PV deployment scenarios four parameters namely number of customers with roof top PV, size of individual PV,
-                        location of customers relative to substation, and voltvar setting for inverters can be configured in EMeRGE. Roof top PV is sized based on annual energy consumption before installing solar.
+                        location of customers relative to substation, and voltvar setting for inverters can be configured in EMeRGE. 
+                        
+                    </p>
+
+                    <div class='grid_container'>
+                        <div class='very_small_container'>
+                            <i class="fas fa-users fa-3x"></i> 
+                            <h4>How many customers are anticipated to install PV ?</h4>
+                        </div>
+                        <div class='very_small_container'>
+                            <i class="fas fa-solar-panel fa-3x"></i> 
+                            <h4>What will be the size of individual PVs ?</h4>
+                        </div>
+                        <div class='very_small_container'>
+                            <i class="fas fa-search-location fa-3x"></i> 
+                            <h4>Where in the feeder PVs are expected ?</h4>
+                        </div>
+                        <div class='very_small_container'>
+                            <i class="fas fa-wave-sine fa-3x"></i> 
+                            <h4>Will PVs be installed with advanced inverters ?</h4>
+                        </div>
+                    </div>
+                    <p>
+                        Roof top PV is sized based on annual energy consumption before installing solar.
                         For e.g. if a customer has pre-solar annual energy consumption of 1000 kWh, and percentage energy consumption customer is willing to replace using PV is 50% then size of PV
                         required is equal to 1000x0.5/(365x24x capacity factor) kW. Now capacity factor of PV depends on many factors such as location, panel orientation etc. 
                         EMeRGE utilizes irradiance data of feeder location to compute the capacity factor and assumes maximum solar generation to reflect worst case scenario.
-                        By default customers are randomly selected across the feeder for PV deployment but they also have flexibility to select customers near or far from the substation to define a scenario.
+                        By default customers are randomly selected across the feeder for PV deployment with flexibility to select customers near or far from the substation if needed to define a scenario.
                         Scenario with customized voltvar settings for solar inverters can also be defined and simulated using EMeRGE. 
                     </p>
 
@@ -107,16 +153,31 @@
                         number of customers present downward of the network in entire simulation time period to compute them.
                     </p>
 
-                    <div class='risk_im'>
-                        <img src="images/risk.png" >
+                    <div class="emerge-risk-box">
+                        <div class='box1'>
+                            <p> Base level risk without PV: Old and poorly maintained distribution feeders have high base risk
+                            </p>
+                        </div>
+                        <div class='box2'>
+                            <p> Risk with low and moderate PV: Problems such as undervoltage can be reduced by installing low to moderate levels of PV lowering base risk</p>
+                        </div>
+                        <div class='box3'>
+                            <p> Risk with extreme PV: Extreme PV can cause oberloading and overvoltage issue increasing risk above base level</p>
+                        </div>
+                        
                     </div>
                     
                     <mark class="highlight">Interactive dashboard</mark>
 
-                    <p> After metrics are computed by peforming time series powerflow results can be visualized in an interactive dashboard using EMeRGE. It also
+                    <p> After metrics are computed by peforming time series powerflow, results can be visualized in an interactive dashboard using EMeRGE. It also
                         uses geographic coordinates to plot the network and shows metrics on top of them. Using dashboard, user can also perform individual PV interconnecton assessment.
                         EMeRGE uses ploty to develop dashboard that can be launced in your favourite web browser.
                     </p>
+
+                    <div class='end-message'>
+                        <i class="fas fa-smile fa-3x"></i> 
+                        <p> Happy reading !!!</p>
+                    </div>
 
                 </div>
                 
