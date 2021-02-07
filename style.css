@@ -306,6 +306,57 @@ mark {
     padding: 0
 }
 
+.folder, .files, .folderwithin {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.folder:hover {
+    background: #204E59;
+}
+
+.files p {
+    margin: 0;
+    padding-left: 5px;
+    font-size: 0.9em;
+}
+
+.files {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.folder h3{
+    margin: 0;
+    padding: 2px 5px;
+    font-weight: normal;
+}
+
+.folderwithin {
+    margin-left: 30px;
+}
+
+.folderwithinwithin {
+    margin-left: 40px;
+}
+
+.folderwithin h3{
+    margin: 0;
+    padding: 2px 5px;
+    font-weight: normal;
+}
+
+.folderwithinwithin h3{
+    margin: 0;
+    padding: 2px 5px;
+    font-weight: normal;
+}
+
+.folder i{
+    padding-left: 5px;
+}
 
 @media(max-width: 800px){
 

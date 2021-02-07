@@ -14,6 +14,7 @@
         <title>Pydss</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
 
     <body>
@@ -32,7 +33,6 @@
 
                 <div class='clr'></div>
 
-
                 <div class='framework-container'>
                     <h1>PyDSS</h1>
                     <h2>Python wrapper around OpenDSSDirect</h2>
@@ -41,10 +41,50 @@
                 </div>
                 
                 <div class='framework-content'>
-                    <h4> Read: Approx. 12 minutes</h4>
+                    <h4> Read: Approx. 5 minutes</h4>
                     <p> PyDSS is an opensource software framework developed using <a href="https://www.python.org">Python</a> at National Renewable Energy Laboratory (NREL) in 2019.
                     This tool is essentially a wrapper around <a href="https://pypi.org/project/OpenDSSDirect.py">OpenDSSDirect</a> which makes it easy to manage and run time series 
-                    powerflow using <a href="https://www.epri.com/pages/sa/opendss">OpenDSS.</a> <a href='pydss.html'> Read more >></a></p>
+                    powerflow using <a href="https://www.epri.com/pages/sa/opendss">OpenDSS.</a> 
+                    </p>
+
+                    <div class='grid_container'>
+                        <div class='container_with_icon'>
+                            <i class="fas fa-sitemap fa-5x"></i> 
+                            <h2>Organization of input files</h2>
+                            <p> PyDSS allows users to organize input files into a folder structure. A PyDSS project skeleton consists of 
+                                multiple folders as well as subfolders. All the opendss files are stored in `DSSfiles` folder. The exported results will be
+                                stored in `Exports` folder. All the log messages will be stored inside the `Logs` folder. Multiple scenarios can be defined 
+                                within `Scenarios` folder and each folder inside `Scenarios` folder correspond to a single scenario. A scenario folder again consists of 
+                                multiple folders for controllers, plots, post processing and export settings.
+                            </p>
+                        </div>
+                        <div class='container_with_icon'>
+                            <i class="fas fa-chart-network fa-5x"></i> 
+                            <h2>Cosimulation integration</h2>
+                            <p> PyDSS uses <a href="https://github.com/GMLC-TDC/HELICS">HELICS</a> for cosimulation. Each PyDSS instance can be 
+                                cosimulated with other PyDSS instances as well as with instances of other simulators. Multiple simulators of different type
+                                can communicate with each other to perform integrated simulation using cosimulation engine such as HELICS. PyDSS makes it easy to cosimulate 
+                                distribution system with other domains such as transmission system.
+                            </p>
+                        </div>
+                    </div>
+                    <div class='grid_container'>
+                        <div class='container_with_icon'>
+                            <i class="fas fa-code fa-5x"></i> 
+                            <h2>Custom control algorithms</h2>
+                            <p> PyDSS has built in capabilty to model advanced inverter functions such as voltvar, voltwatt,
+                                inverter ride through (2018 as well as 2003) as well as distributed motors. User can also 
+                                define custom controllers easily. Controllers setting can be defined in a file which PyDSS will load and use during simulation.
+                            </p>
+                        </div>
+                        <div class='container_with_icon'>
+                            <i class="fas fa-chart-line fa-5x"></i> 
+                            <h2>Monte carlo, post processing and visualization</h2>
+                            <p> Other features of PyDSS include post processing, results visualizationa and monte carlo study. User can customize what
+                                plots they want to visualize, what results to export as well as perform sweeping study using MonteCarlo simulation. 
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
 
